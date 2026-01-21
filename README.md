@@ -42,3 +42,43 @@ Secret Linking: You explicitly link the Secret you created earlier to this integ
 
 ### 4. Verification
 Finally, you use the "Show" commands to confirm that both the vault (Secret) and the bridge (Integration) were created successfully and are ready for use in the final step.
+
+## Step 3: Cloning the Repository via Snowflake UI (Snowsight)
+Once your Secret and API Integration are ready, follow these steps to link your repository visually:
+
+### 1. Navigate to Git Repositories
+Log in to Snowsight.
+
+In the left-hand navigation menu, go to Data » Git Repositories.
+
+Note: If you don't see this, ensure you are using a role with sufficient privileges (like the ACCOUNTADMIN or SYSADMIN used in Step 2).
+
+### 2. Create a New Repository Object
+Click the + Git Repository button in the top right corner.
+
+A dialog box will appear. Fill in the following details:
+
+Name: Provide a name for the repository object (e.g., MY_GIT_REPO).
+
+API Integration: Select the integration you created in Step 2 (GIT_API_INTEGRATION).
+
+Git Repository URL: Paste the HTTPS clone URL from GitHub (e.g., https://github.com/username/repo.git).
+
+Secret: Select the secret you created earlier (GIT_SECRET).
+
+### 3. Finalize and Fetch
+Click Create.
+
+Snowflake will now establish the connection. Once created, you will see your repository listed.
+
+Click on the repository name to open the Repository Details view.
+
+Click the Fetch button at the top right to pull the latest metadata, branches, and tags from GitHub.
+
+### 4. Browse Your Code
+Once the fetch is complete, you can click on the Branches tab.
+
+Select your main branch (e.g., main or master).
+
+You can now browse your SQL scripts, Python files, or YAML configurations directly within the Snowflake UI.
+[Click here to watch the Video Walkthrough: Cloning the Repository via Snowflake UI](https://drive.google.com/file/d/1y_s7nqPRwVtLRPlGGNjEnvN4hEL4k1Y_/view?usp=sharing)
