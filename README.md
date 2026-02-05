@@ -29,7 +29,7 @@ I stored the GitHub credentials securely within Snowflake. This prevents hardcod
 
 ```sql
 -- Role: ACCOUNTADMIN
-CREATE OR REPLACE SECRET github_pat_secret
+CREATE OR REPLACE SECRET GIT_SECRET
   TYPE = PASSWORD
   USERNAME = 'Your-GitHub-Username'
   PASSWORD = 'your-classic-pat-token-here';
@@ -41,6 +41,7 @@ This object authorizes Snowflake to communicate with the GitHub API domain.
 CREATE OR REPLACE API INTEGRATION git_api_integration
   API_PROVIDER = git_https_api
   API_ALLOWED_PREFIXES = ('https://github.com/your_org_or_user/')
+  ALLOWED_AUTHENTICATION_SECRETS=(GIT_SECRET)
   ENABLED = TRUE;
 ```
 ### 6. Creating the Workspace (Direct Link)
