@@ -2,6 +2,8 @@
 
 This project documents the process of connecting a Snowflake account to a GitHub repository to enable native version control.
 
+![RBAC Hierarchy](Gemini_Generated_Image_tx2pthtx2pthtx2p.png)
+
 ## 🛠️ Implementation Steps
 
 ### 1. GitHub Authentication (PAT)
