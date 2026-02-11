@@ -2,7 +2,7 @@
 
 This project documents the process of connecting a Snowflake account to a GitHub repository to enable native version control.
 
-![RBAC Hierarchy](Gemini_Generated_Image_tx2pthtx2pthtx2p.png)
+![Integration Architecture](Gemini_Generated_Image_tx2pthtx2pthtx2p.png)
 
 ## 🛠️ Implementation Steps
 
@@ -109,4 +109,12 @@ GRANT USAGE ON SCHEMA SNOWGIT.PUBLIC TO ROLE DA;
 GRANT USAGE ON SECRET GIT_SECRET TO ROLE DA;
 GRANT USAGE ON INTEGRATION GIT_API_INTEGRATION TO ROLE DA;
 ```
+To help visualize the connection between GitHub and Snowflake, I have recorded the following walkthroughs. Click the links or expand the sections below to see the process in action.
 
+| Step | Topic | Description | Link |
+| :--- | :--- | :--- | :--- |
+| **01** | 🔐 **GIT repo Setup** | Creating a git repo on snowflake platform. | [**Watch on Drive ➔**](https://drive.google.com/file/d/1dCcv7xMJwOY6IP_VnONbp-frl5LmLO_b/view?usp=sharing) |
+| **02** | 🛠️ **Workspace Link** | Linking a private GitHub Org repository through the Snowsight UI. | [**Watch on Drive ➔**](https://drive.google.com/file/d/1khMlRUOMFCyBa1FcSwwDiUoeBwJKKj9S/view?usp=sharing) |
+| **03** | 🔄 **Live Syncing** | Demonstrating a `git push` followed by a Snowflake `fetch`. | [**Watch on Drive ➔**](https://drive.google.com/file/d/1PT-84iyiuzIjNCaZ88kDSfjE9NDwPsw6/view?usp=sharing) |
+
+---
